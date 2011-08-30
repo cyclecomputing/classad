@@ -1,0 +1,9 @@
+.autotest
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+LICENSE
+bin/classad
+lib/classad.rb
+test/test_classad.rb
