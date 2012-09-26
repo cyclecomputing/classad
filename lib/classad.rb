@@ -98,7 +98,7 @@ end
 
 class ClassAd < Hash
 
-  VERSION = '1.2.0'
+  VERSION = '1.2.1'
 
   def to_xml(pretty=false)
     opts = {}
@@ -152,7 +152,8 @@ class ClassAd < Hash
   end
 
   def xmlescape(str)
-    str.gsub('<','&lt;').gsub('&','&amp;').gsub('>','&gt;')
+    # http://stackoverflow.com/questions/1542214/weird-backslash-substitution-in-ruby
+    str.gsub('<','&lt;').gsub('&','&amp;').gsub('>','&gt;').gsub('\\') {'\\\\'}
   end
 
 end
